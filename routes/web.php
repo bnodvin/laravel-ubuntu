@@ -29,6 +29,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::get('/resources', function() {
-    return Inertia::redner('Resources/Index');
+    return Inertia::render('Resources/Index');
 });
 
