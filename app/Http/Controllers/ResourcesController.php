@@ -14,8 +14,6 @@ class ResourcesController extends Controller
      */
     public function index()
     {
-        $resources = Resources::all();
-
         return Inertia::render('Users/Index');
     }
 
@@ -26,7 +24,7 @@ class ResourcesController extends Controller
      */
     public function create()
     {
-        return view('resources.create');
+ 
     }
 
     /**
@@ -37,9 +35,7 @@ class ResourcesController extends Controller
      */
     public function store(Request $request)
     {
-        Resources::create($request->validated());
 
-        return redirect()->route('resources.index');
     }
 
     /**
@@ -50,7 +46,7 @@ class ResourcesController extends Controller
      */
     public function show(Resources $resources)
     {
-        return view('resources.show', compact('resources'));
+
     }
 
     /**
