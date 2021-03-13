@@ -24,8 +24,6 @@ Route::get('/', function () {
     ]);
 });
 
-/* Route::get('/resources', [\App\Http\Controllers\ResourcesController::class]); */
-
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
