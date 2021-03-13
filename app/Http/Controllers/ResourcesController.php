@@ -16,7 +16,7 @@ class ResourcesController extends Controller
     {
         $resources = Resources::all();
 
-        return view('resources.show', compact('resources'));
+        return Inertia::render('Users/Index');
     }
 
     /**

@@ -29,4 +29,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::resource('resources', \App\Http\Controllers\ResourcesController::class);});
+    Route::resource('resources', \App\Http\Controllers\ResourcesController::class);
+});
