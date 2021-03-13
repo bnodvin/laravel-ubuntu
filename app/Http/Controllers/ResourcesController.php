@@ -14,7 +14,7 @@ class ResourcesController extends Controller
      */
     public function index()
     {
-        //
+        return view('resources.show', compact('resources'));
     }
 
     /**
@@ -46,7 +46,7 @@ class ResourcesController extends Controller
      */
     public function show(Resources $resources)
     {
-        //
+        
     }
 
     /**
