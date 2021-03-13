@@ -28,5 +28,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
 
-Route::get('/resources', ResourcesController::class);
-
+Route::get('/resources', [\App\Http\Controllers\ResourcesController::class, '__invoke']);
